@@ -5,7 +5,9 @@ A tool for tracking how long you can wear your contact lenses
 ## Stack
 
 - AdonisJS
-...
+- TailwindCSS
+- ...
+
 
 ## Development
 
