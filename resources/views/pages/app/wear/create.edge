@@ -1,0 +1,12 @@
+@layout()
+<form method="post" action="{{route('wear.store')}}">
+  {{ csrfField() }}
+  <div class="w-full flex gap-4">
+  @!component('components/input_group', {"name":"start_date", "labelText":"Start date", type:"datetime-local"})
+  @!component('components/input_group', {"name":"end_date", "labelText":"End date", type:"datetime-local"})
+  </div>
+  @component('components/buttons/primary')
+    Create
+  @end
+</form>
+@end

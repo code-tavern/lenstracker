@@ -1,0 +1,8 @@
+@layout()
+<form method="POST" action="{{route('wear.update', [wear.id])}}?_method=PUT">
+  {{ csrfField() }}
+  <input name="start_date" type="datetime-local" value={{wear.startDate}} />
+  <input name="end_date" type="datetime-local" value={{wear.endDate}} />
+  <button type="submit">Submit</button>
+</form>
+@end

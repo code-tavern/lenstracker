@@ -1,0 +1,6 @@
+<button {{html.attrs({
+  type:"button",
+  class: "button " + variant
+})}}>
+  {{{await $slots.main()}}}
+</button>

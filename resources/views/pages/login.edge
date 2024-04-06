@@ -1,0 +1,23 @@
+@layout({header:false})
+<div class="w-full h-full grid grid-cols-1 md:grid-cols-2">
+  <div class="w-full h-full flex flex-col justify-center items-center">
+    <div class="p-4 shadow-md">
+      <div class="text-center mb-6">
+        <h1 class="text-xl font-bold">Welcome to Lenstracker</h1>
+      </div>
+      <div class="flex flex-col">
+        <div class="mb-4">
+          To access this service, please sign in using of the providers below
+        </div>
+        <div class="w-full flex flex-wrap justify-between">
+          <a class="px-2 py-1 border border-gray-200 shadow-sm rounded-md inline-flex items-center" href="{{ route('auth.redirect', ['github'])}}"> {{ svg('mdi:github', {class:'mr-4'}) }} Sign in using Github</a>
+          <a class="px-2 py-1 border border-gray-200 shadow-sm rounded-md inline-flex items-center" href="{{ route('auth.redirect', ['github'])}}"> {{ svg('mdi:google', {class:'mr-4'}) }} Sign in using Google</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-full h-full bg-cover relative" style="background-image:url('{{asset('resources/images/login_img.jpg')}}')">
+    <a class="absolute bottom-0 text-gray-200" href="https://www.pexels.com/photo/close-up-of-binoculars-on-a-pier-20330742/">Photo by Umut Sarıalan</a>
+  </div>
+</div>
+@end

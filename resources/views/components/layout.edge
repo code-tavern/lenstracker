@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="m-0 p-0">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Lenstracker </title>
+
+  @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
+<body class="h-screen w-full flex flex-col">
+  @if (header === undefined || header)
+  <header>
+    <div class="w-full flex items-center justify-between px-4">
+      <a class="font-bold text-xl" href="/">Lenstracker</a>
+      <nav>
+        <ul class="flex items-center justify-between space-x-4">
+          <li>
+            <a href="/goals">Goals</a>
+          </li>
+          @if (auth.isAuthenticated)
+            <li>
+              <p>Hej, {{auth.user.fullName}}</p>
+            </li>
+          @end
+        </ul>
+      </nav>
+    </div>
+  </header>
+  @end
+  <main class="flex-1">
+    <div class="container mx-auto">
+      {{{ await $slots.main() }}}
+    </div>
+  </main>
+  <footer>
+   <p>&copy; 2024</p>
+  </footer>
+</body>
+</html>
