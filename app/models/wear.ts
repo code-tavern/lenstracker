@@ -9,7 +9,7 @@ export default class Wear extends BaseModel {
   declare startDate: DateTime
 
   @column.dateTime()
-  declare endDate: DateTime
+  declare endDate: DateTime | null
 
   @column()
   declare userId: number
