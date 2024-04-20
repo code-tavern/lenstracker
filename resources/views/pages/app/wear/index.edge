@@ -1,6 +1,12 @@
 @layout()
   <div>
     <a href="{{route('wear.create')}}">Wear them</a>
+    <form method="post" action="{{route('wear.wear')}}">
+      {{csrfField()}}
+      @component('components/buttons/primary', {type:"submit"})
+        start/end wear session
+      @end
+    </form>
   </div>
   <table class="min-w-full divide-y divide-gray-300">
     <thead>

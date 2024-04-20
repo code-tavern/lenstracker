@@ -23,4 +23,5 @@ router.get('/auth/:provider/callback', [AuthController, 'callback']).where('prov
 
 router.group(() => {
   router.resource("wear", WearsController)
+  router.post("/wear/wear", [WearsController, "wear"]).as("wear.wear")
 }).use(middleware.auth()).prefix("/app")
